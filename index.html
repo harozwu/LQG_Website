@@ -2,71 +2,376 @@
 <html lang="vi">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>LQG Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <div class="container">
 
-        <h1>LQG</h1>
+        <!-- ================= LEFT ================= -->
 
-        <h3>ME Engineer | Developer | AI Enthusiast</h3>
+        <aside class="left-panel">
 
-        <p>
-            Xin chào, mình là LQG. Đây là website lưu lại hành trình học tập,
-            các dự án và mục tiêu phát triển của bản thân.
-        </p>
+            <img src="images/avatar.png" alt="Avatar" class="avatar">
 
-        <button onclick="openPopup()">
-            MORE
-        </button>
+            <h1>Vũ Trọng Hoàng</h1>
+
+            <h3>Founder of LQG</h3>
+
+            <p class="intro">
+
+                Xin chào 👋
+
+                <br><br>
+
+                Chào mừng bạn đến với dự án chính thức của LQG.
+
+                Website này lưu lại toàn bộ quá trình học tập, phát triển kỹ năng,
+                các dự án và hành trình xây dựng LQG.
+
+            </p>
+
+            <button onclick="openPopup('about')">
+
+                Xem thêm
+
+            </button>
+
+        </aside>
+
+        <!-- ================= RIGHT ================= -->
+
+        <main class="right-panel">
+
+            <h2>LQG Information Center</h2>
+
+            <div class="card-container">
+
+                <div class="card" onclick="openPopup('about')">
+
+                    <h3>👤 Giới thiệu</h3>
+
+                    <p>Thông tin cá nhân</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('career')">
+
+                    <h3>💼 Công việc</h3>
+
+                    <p>Kinh nghiệm làm việc</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('timeline')">
+
+                    <h3>📅 Timeline</h3>
+
+                    <p>Lộ trình phát triển LQG</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('skills')">
+
+                    <h3>💻 Skills</h3>
+
+                    <p>Kỹ năng hiện có</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('projects')">
+
+                    <h3>🚀 Projects</h3>
+
+                    <p>Các dự án</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('aihome')">
+
+                    <h3>🤖 AI Home</h3>
+
+                    <p>Dự án AI quản gia</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('certificate')">
+
+                    <h3>🏆 Chứng chỉ</h3>
+
+                    <p>Đang cập nhật...</p>
+
+                </div>
+
+                <div class="card" onclick="openPopup('contact')">
+
+                    <h3>📞 Liên hệ</h3>
+
+                    <p>Email • GitHub • Facebook</p>
+
+                </div>
+
+            </div>
+
+        </main>
 
     </div>
 
-    <!-- Popup -->
+    <!-- ================================================= -->
 
-    <div class="popup" id="popup">
+    <!-- ================= POPUP ABOUT ================= -->
 
-        <div class="popup-content">
+    <!-- ================================================= -->
 
-            <span class="close" onclick="closePopup()">&times;</span>
+    <div class="popup" id="about">
 
-          <hr>
-            <h2>  Giới thiệu bản thân</h2>
+        <div class="popup-box">
 
-            <p>
-                Xin chào! Mình là LQG.
-            </p>
+            <span class="close" onclick="closePopup('about')">
 
-            <p>
-                Hiện tại mình đang làm việc trong lĩnh vực kỹ thuật và luôn
-                mong muốn phát triển bản thân thông qua việc học công nghệ,
-                lập trình và tự động hóa.
-            </p>
+                &times;
 
-            <p>
-                Website này được tạo ra để lưu lại toàn bộ hành trình phát triển,
-                các kỹ năng, dự án và mục tiêu trong tương lai.
-            </p>
+            </span>
+
+            <h2>👤 Giới thiệu</h2>
 
             <hr>
-        
 
-            <h3>Mục tiêu</h3>
+            <p><b>Họ và tên:</b> Vũ Trọng Hoàng</p>
+
+            <p><b>Ngày sinh:</b> 24 / 06 / 2001</p>
+
+            <p><b>Địa chỉ:</b></p>
+
+            <p>Phường Bạch Đằng-Thủy Nguyên -Thành phố Hải Phòng</p>
+
+            <p><b>Sở thích:</b>  Đánh cầu lông</p>
+
+                 
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CAREER ================= -->
+
+    <div class="popup" id="career">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('career')">
+
+                &times;
+
+            </span>
+
+            <h2>💼 Kinh nghiệm làm việc</h2>
+
+            <hr>
+
+            <h3>2023 - 2024</h3>
+
+            <p>Kỹ thuật viên TE</p>
+
+            <p>Công ty Amtran</p>
+
+            <br>
+
+            <h3>2025 - Hiện tại</h3>
+
+            <p>Kỹ sư ME</p>
+
+            <p>Công ty Amtran</p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= TIMELINE ================= -->
+
+    <div class="popup" id="timeline">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('timeline')">
+
+                &times;
+
+            </span>
+
+            <h2>📅 LQG Timeline</h2>
+
+            <hr>
 
             <ul>
-                <li>✔ Học Python</li>
-                <li>✔ Thành thạo HTML/CSS/JavaScript</li>
-                <li>✔ Phát triển AI Home Manager</li>
-                <li>✔ Thiết kế Website LQG</li>
-                <li>✔ Không ngừng học hỏi và cải thiện bản thân</li>
-            <hr>
+
+                <li>24-06-2026 : LQG Birth</li>
+
+                <li>Website Portfolio</li>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+                <li>Python</li>
+
+                <li>ESP32</li>
+
+                <li>AI Home Manager</li>
+
+                <li>LQG Version 1.0</li>
+
             </ul>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SKILLS ================= -->
+
+    <div class="popup" id="skills">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('skills')">
+
+                &times;
+
+            </span>
+
+            <h2>💻 Skills</h2>
+
+            <hr>
+
+            <ul>
+
+                <li>HTML</li>              
+
+                <li>Python</li>
+                
+                <li>Chinese</li>
+
+                <li>English</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <div class="popup" id="projects">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('projects')">
+
+                &times;
+
+            </span>
+
+            <h2>🚀 Projects</h2>
+
+            <hr>
+
+            <ul>
+
+                <li>LQG Website</li>
+
+                <li>AI Home Manager</li>
+
+                <li>ESP32 Smart Door</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- ================= AI HOME ================= -->
+
+    <div class="popup" id="aihome">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('aihome')">
+
+                &times;
+
+            </span>
+
+            <h2>🤖 AI Home</h2>
+
+            <hr>
+
+            <p>
+
+                Dự án AI quản gia thông minh được phát triển nhằm kết nối
+                website, AI, ESP32 và Smart Home thành một hệ sinh thái thống nhất.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CERTIFICATE ================= -->
+
+    <div class="popup" id="certificate">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('certificate')">
+
+                &times;
+
+            </span>
+
+            <h2>🏆 Chứng chỉ</h2>
+
+            <hr>
+
+            <p>Đang cập nhật...</p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CONTACT ================= -->
+
+    <div class="popup" id="contact">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup('contact')">
+
+                &times;
+
+            </span>
+
+            <h2>📞 Liên hệ</h2>
+
+            <hr>
+
+            <p>GitHub</p>
+
+            <p>Email</p>
+
+            <p>Facebook</p>
 
         </div>
 

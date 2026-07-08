@@ -1,23 +1,85 @@
-function openPopup(){
+/*======================================================
+                    POPUP
+======================================================*/
 
-    document.getElementById("popup").style.display="block";
+function openPopup(id){
 
-}
-
-function closePopup(){
-
-    document.getElementById("popup").style.display="none";
+    document.getElementById(id).style.display = "block";
 
 }
 
-window.onclick=function(event){
+function closePopup(id){
 
-    const popup=document.getElementById("popup");
+    document.getElementById(id).style.display = "none";
 
-    if(event.target==popup){
+}
 
-        popup.style.display="none";
+
+/*======================================================
+            CLICK RA NGOÀI ĐỂ ĐÓNG
+======================================================*/
+
+window.onclick = function(event){
+
+    let popups = document.querySelectorAll(".popup");
+
+    popups.forEach(function(popup){
+
+        if(event.target == popup){
+
+            popup.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/*======================================================
+                ESC ĐỂ ĐÓNG
+======================================================*/
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Escape"){
+
+        let popups=document.querySelectorAll(".popup");
+
+        popups.forEach(function(popup){
+
+            popup.style.display="none";
+
+        });
 
     }
+
+});
+
+
+/*======================================================
+            CARD HOVER (DỰ PHÒNG)
+======================================================*/
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+    card.addEventListener("mouseenter",function(){
+
+        card.style.transition=".3s";
+
+    });
+
+});
+
+
+/*======================================================
+                LOADING
+======================================================*/
+
+window.onload=function(){
+
+    console.log("LQG Website Loaded");
 
 }
